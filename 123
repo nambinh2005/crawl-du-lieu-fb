@@ -1,0 +1,13 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from time import sleep
+trinhduyet=webdriver.Chrome()
+trinhduyet.get("https://www.facebook.com/")
+taikhoan=trinhduyet.find_element(By.ID,"email")
+taikhoan.send_keys("abcxyz")
+matkhau=trinhduyet.find_element(By.ID,"pass")
+matkhau.send_keys(1234)
+matkhau.send_keys(Keys.ENTER)
+sleep(5)
+trinhduyet.close()
